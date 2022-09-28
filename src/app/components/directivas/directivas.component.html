@@ -1,0 +1,10 @@
+<h2>Listado de alumnos y cursos que están realizando</h2>
+<!--en este ejemplo utilizo la directiva estructural ngFor para mostrar el array de alumnos y una directiva de atributo ngClass para asignar
+//clase según la condición del número de identificación (id) del alumno. Se utilizó Pipe para mostrar el nombre del curso en mayúscula-->
+<ul>
+    <li *ngFor="let alumno of ALUMNOS">
+        <div [ngClass]="alumno.id>2 ? 'mayora2' : 'default'">
+            {{alumno.id}}. {{alumno.nombre}} {{alumno.apellido}}. {{alumno.curso | uppercase}}
+        </div>
+    </li>
+</ul>
